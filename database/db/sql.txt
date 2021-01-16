@@ -1,0 +1,75 @@
+CREATE TABLE TblCustomers (
+    CustomerID SERIAL PRIMARY KEY,
+    CustomerName varchar(255),
+    ContactName varchar(255),
+    Address varchar(255),
+    City varchar(255),
+    PostalCode varchar(255),
+    Country varchar(255)
+);
+CREATE TABLE TblCustomers (
+    CustomerID SERIAL PRIMARY KEY,
+    CustomerName varchar(255),
+    ContactName varchar(255),
+    Address varchar(255),
+    City varchar(255),
+    PostalCode varchar(255),
+    Country varchar(255)
+);
+
+CREATE TABLE Categories (
+    CategoryID SERIAL PRIMARY KEY,
+    CategoryName varchar(255),
+    Description varchar(255)
+);
+
+CREATE TABLE Employees (
+    EmployeeID SERIAL PRIMARY KEY,
+    LastName varchar(255),
+    FirstName varchar(255),
+    BirthDate date,
+    Photo varchar(255),
+    Notes varchar(255)
+);
+
+CREATE TABLE OrderDetails (
+    OrderDetailID SERIAL PRIMARY KEY,
+    OrderID integer,
+    ProductID integer,
+    Quantity integer
+);
+
+CREATE TABLE Orders (
+    OrderID SERIAL PRIMARY KEY,
+    CustomerID integer,
+    EmployeeID integer,
+    OrderDate integer,
+    ShipperID integer
+);
+
+CREATE TABLE Products (
+    ProductID SERIAL PRIMARY KEY,
+    ProductName varchar(255),
+    SupplierID integer,
+    CategoryID integer,
+    Unit varchar(255),
+    Price integer
+);
+
+CREATE TABLE Shippers (
+    ShipperID SERIAL PRIMARY KEY,
+    ShipperName varchar(255),
+    Phone varchar(255)
+);
+
+CREATE TABLE Suppliers (
+    SupplierID SERIAL PRIMARY KEY,
+    SupplierName varchar(255),
+    ContactName varchar(255),
+    Address varchar(255),
+    City varchar(255),
+    PostalCode varchar(255),
+    Country varchar(255),
+    Phone varchar(255)
+);
+            
